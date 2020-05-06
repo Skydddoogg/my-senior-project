@@ -1,0 +1,121 @@
+\documentclass{itkmitlproject}
+
+\usepackage{afterpage}
+\usepackage{graphicx,amsmath,latexsym,amssymb,amsthm}
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{placeins}
+\usepackage[super,square]{natbib}
+\usepackage{booktabs}
+
+\setmainfont{Angsana}[
+ Path = fonts/,
+ UprightFont = Angsana,
+ ItalicFont = *-Italic,
+ BoldFont = *-Bold,
+ BoldItalicFont = *-BoldItalic,
+    Extension = .ttf,
+    WordSpace = 0.9,
+    Scale = 1.6
+]
+
+\graphicspath{ {images/} }
+
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<succes>}{<failure>}
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\def\bibindent{2.1em}
+\let\old@biblabel\@biblabel
+\def\@biblabel#1{\old@biblabel{#1}\kern\bibindent}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\makeatother
+
+%1. Your thesis title (THAI)
+\newcommand{\ThesisTitle}{ฟังก์ชันสูญเสียสำหรับการเรียนรู้ข้อมูลที่ไม่สมดุล}
+%2. Your thesis title (ENG)
+\newcommand{\ThesisTitleENG}{Hybrid Loss for Learning Imbalanced Data}
+%3. Author name
+\newcommand{\Author}{ธนวัฒน์ หลอดแก้ว}
+%4. Author name ENG
+\newcommand{\AuthorENG}{Thanawat Lodkaew}
+%5. Author student ID
+\newcommand{\SId}{59070071}
+%9. Advisor name
+\newcommand{\Advisor}{รองศาสตราจารย์ ดร. กิติ์สุชาต  พสุภา}
+%10. Advisor name ENG
+\newcommand{\AdvisorENG}{Assoc. Prof. Dr. Kitsucart  Pasupa}
+%11. ภาคเรียนที่
+\newcommand{\Sem}{1}
+%12. ปีการศึกษา พ.ศ.
+\newcommand{\AcaY}{2562}
+%13. ปีการศึกษา ค.ศ.
+\newcommand{\AcaYAD}{2019}
+%14. วันส่งรายงาน
+\newcommand{\SubD}{10 พฤศจิกายน พ.ศ. 2561}
+
+\begin{document}    
+    \frontmatter
+    \lhead{}\rhead{}\chead{}\lfoot{}\cfoot{\thepage}\rfoot{}
+    \makecover    
+    \makeinnercover
+    \makeengcover
+    \makecopyrightcover
+    \makethesiscert
+    \makeprojectcert
+   
+    % Setting margin for page numbering on frontmatter
+    \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
+    
+    \makeabstract{
+        ปัญหาความไม่สมดุลของข้อมูล (Class Imbalance Problem) เป็นเรื่องที่ถูกหยิบขึ้นมาวิจัยอย่างแพร่หลาย เนื่องข้อมูลส่วนใหญ่มีจำนวนตัวอย่างของแต่ละกลุ่มข้อมูลไม่เท่ากัน
+        ในงานวิจัยชิ้นนี้มุ่งเน้นไปที่การสร้างสรรค์แบบจำลองการเรียนรู้เชิงลึกแบบผสม (Hybrid Deep Learning) ซึ่งเป็นการผสมผสานกันระหว่างแบบจำลองการเรียนรู้เชิงลึก (Deep Learning) หลายตัว 
+        มาเพื่อแก้ปัญหาดังกล่าว เนื่องจากแบบจำลอง Hybrid Deep Learning สามารถเพิ่มประสิทธิภาพในการจัดกลุ่มข้อมูลที่มีความสมดุลกันได้ ในทางเดียวกันแบบจำลองดังกล่าวอาจจะสามารถจัดกลุ่มข้อมูลที่ไม่สมดุลกันได้อย่างมีประสิทธิภาพเช่นเดียวกัน 
+        ในเบื้องต้นเราได้สร้างแบบจำลอง Deep Learning แบบง่าย แล้วเพ่ิมความซับซ้อนของแบบจำลองขึ้นเรื่อย ๆ เพื่อที่จะได้แบบจำลองที่สมบูรณ์ที่สุด
+    }
+
+    \makeabstracteng{
+        Classification of imbalanced data is extremely common in practice, and this problem has been widely studied in classical machine learning. 
+        A classifier produced from an imbalanced data set is likely to be biased towards the majority class and show inferior classification accuracy on the minority class. 
+        This work aims at inventing a hybrid deep learning model for classification on imbalanced data. Recently, many hybrid deep learning model 
+        can boost the accuracy on classificaiton of balanced data. In the same way, it may work on imbalanced data effectively. Initially, a simple deep learning model is built and tested. 
+        We will find out its disvantages or problems such as overfitting and then solve those by building more complex model. 
+        The process will be repeated until we get a perfect model with its satisfying results.
+    }
+
+    \makeack
+
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญ}
+    \tableofcontents
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญตาราง}
+    \listoftables    
+    
+    \newpage
+    \addcontentsline{toc}{chapter}{สารบัญภาพ}
+    \listoffigures
+    
+    % Reset frontmatter page numbering margin, back to original margin from class file
+    \restoregeometry
+
+    \mainmatter
+    \lhead{}\rhead{\thepage}\chead{}\lfoot{}\cfoot{}\rfoot{}
+    
+    \include{chapter1}
+    \include{chapter2}
+    \include{chapter3}
+   	\include{chapter4}
+   	\include{chapter5}
+    
+    \clearpage
+    \addcontentsline{toc}{chapter}{บรรณานุกรม}
+    \bibliographystyle{IEEEtran}
+    \bibliography{reference}
+    
+    \startappendix
+    \include{appendix}
+    
+\end{document}
