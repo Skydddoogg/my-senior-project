@@ -16,7 +16,8 @@
 \contentsline {subsection}{\numberline {2.1.2}การจัดการปัญหาความไม่สมดุลกันของกลุ่มข้อมูลด้วยวิธีการต่าง ๆ}{4}
 \contentsline {subsubsection}{Cost-Sensitive Learning}{4}
 \contentsline {subsection}{\numberline {2.1.3}การเรียนรู้เชิงลึก (Deep Learning)}{5}
-\contentsline {subsubsection}{การเรียนรู้ของโมเดล Deep Learning}{6}
+\contentsline {subsection}{\numberline {2.1.4}การเรียนรู้ของโมเดล Deep Learning}{6}
+\contentsline {subsection}{\numberline {2.1.5}ฟังก์ชันสูญเสีย (Loss Function)}{6}
 \contentsline {section}{\numberline {2.2}งานวิจัยที่เกี่ยวข้อง}{6}
 \contentsline {chapter}{\numberline {3}วิธีการดำเนินการวิจัย}{8}
 \contentsline {section}{\numberline {3.1}Hybrid Loss}{8}
@@ -26,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.1.4}การหาอนุพันธ์}{10}
 \contentsline {subsubsection}{อนุพันธ์ของ FL}{10}
 \contentsline {subsubsection}{อนุพันธ์ของ MFE}{11}
-\contentsline {subsubsection}{อนุพันธ์ของ Hybrid Loss}{11}
+\contentsline {subsubsection}{อนุพันธ์ของ Hybrid Loss}{12}
 \contentsline {section}{\numberline {3.2}Metrics สำหรับการประเมินประสิทธิภาพของโมเดล}{12}
 \contentsline {subsection}{\numberline {3.2.1}F1-Score}{12}
 \contentsline {subsection}{\numberline {3.2.2}Receiver Operating Characteristic Curve (ROC Curve)}{13}
@@ -35,9 +36,9 @@
 \contentsline {section}{\numberline {4.1}Binary Classification}{15}
 \contentsline {subsubsection}{ผลการทดลองกับชุดข้อมูลแบบมีโครงสร้าง}{15}
 \contentsline {subsubsection}{ผลการทดลองกับชุดข้อมูล CIFAR-100}{15}
-\contentsline {paragraph}{Tree 1}{15}
-\contentsline {paragraph}{Tree 2}{15}
-\contentsline {paragraph}{Tree Household}{15}
+\contentsline {paragraph}{Tree1}{15}
+\contentsline {paragraph}{Tree2}{15}
+\contentsline {paragraph}{Household}{15}
 \contentsline {section}{\numberline {4.2}Multi-Class Classification}{16}
 \contentsline {subsubsection}{ผลการทดลองกับชุดข้อมูล Long-Tailed-Imbalanced CIFAR-10}{16}
 \contentsline {subsubsection}{ผลการทดลองกับชุดข้อมูล Step-Imbalanced CIFAR-10}{16}

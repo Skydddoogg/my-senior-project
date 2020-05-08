@@ -78,7 +78,7 @@ d =  \frac{\mathrm{1} }{\mathrm{1} + e^{-x} }
 	p = \sigma (x) = \frac{1}{1 + e^{-x}}
 \end{equation}
 
-ดังนั้น
+ดังนั้น จากสมการที่~\ref{eq:p} จะได้
 
 \begin{equation}
 	p_{t} = \frac{1}{1 + e^{xy}}
@@ -87,7 +87,7 @@ d =  \frac{\mathrm{1} }{\mathrm{1} + e^{-x} }
 เมื่อหาอนุพันธ์ของ $p_{t}$ เทียบกับ $x$ จะได้
 
 \begin{equation}
-\frac{dp_{t}}{dx} = y(1 - p_{t})p_{t}
+\frac{\partial p_{t}}{\partial x} = y(1 - p_{t})p_{t}
 \end{equation}
 
 กำหนดให้
@@ -96,17 +96,23 @@ d =  \frac{\mathrm{1} }{\mathrm{1} + e^{-x} }
     l_{FL} = \frac{1}{n} \sum_{i = 1}^{n} - (1 - p_{t}^{i})^{\gamma}\log (p_{t}^{i})
 \end{equation}
 
-โดยที่ $\gamma$ เป็นค่าคงที่ เมื่อหาอนุพันธ์ของ $l_{FL}$ เทียบกับ $x$จะได้
+โดยที่ $\gamma$ เป็นค่าคงที่ เมื่อหาอนุพันธ์ของ $l_{FL}$ เทียบกับ $x$ จะได้
 
 \begin{equation}
 \begin{split}
-\frac{dl_{FL}}{dx} & = \frac{1}{n} \sum_{i = 1}^{n} (\frac{dl_{FL}}{dp_{t}^{i}} * \frac{dp_{t}^{i}}{dx^{i}}) \\
+\frac{\partial l_{FL}}{\partial x^{i}} & = \frac{\partial l_{FL}}{\partial p_{t}^{i}} * \frac{\partial p_{t}^{i}}{\partial x^{i}} \\
 & =\frac{1}{n} \sum_{i = 1}^{n} [\gamma (1 - p_{t}^{i})^{\gamma - 1} \log (p_{t}^{i}) + \frac{(1 - p_{t}^{i})^{\gamma}}{p_{t}^{i}}] * [y^{i}(1 - p_{t}^{i})p_{t}^{i}]  \\
 & = \frac{1}{n} \sum_{i = 1}^{n} y^{i} (1 - p_{t}^{i})^{\gamma} (\gamma p_{t}^{i} \log (p_{t}^{i}) + p_{t}^{i} - 1)
 \end{split}
 \end{equation}
 
 \subsubsection{อนุพันธ์ของ MFE}
+จากสมการที่~\ref{eq:sigmoid} สามารถหาอนุพันธ์ของ $d$ เทียบกับ $x$ ได้ดังนี้
+
+\begin{equation}
+\frac{\partial d}{\partial x} = d(1 - d)
+\end{equation}
+
 กำหนดให้
 
 \begin{equation}
@@ -126,17 +132,23 @@ MSE_{minor} = \frac{1}{n\_minor}\sum_{i=1}^{n\_minor}\frac{1}{2}(y^{i} - d^{i})^
 เมื่อหาอนุพันธ์ของ $l_{MFE}$ เทียบกับ $x$ จะได้
 
 \begin{equation}
-\frac{dl_{MFE}}{dx} = \frac{dMSE_{major}}{dx} + \frac{dMSE_{minor}}{dx}
+\frac{\partial l_{MFE}}{\partial x^{i}} = \frac{\partial MSE_{major}}{\partial x^{i}} + \frac{\partial MSE_{minor}}{\partial x^{i}}
 \end{equation}
 
 โดยที่
 
 \begin{equation} \label{eq:fpe_derivative}
-\frac{dMSE_{major}}{dx} = - \frac{1}{n\_major} \sum_{i=1}^{n\_major} (y^{i} - d^{i}) d^{i} (1 - d^{i})
+\begin{split}
+\frac{\partial MSE_{major}}{\partial x^{i}} & = \frac{\partial MSE_{major}}{\partial d^{i}} * \frac{\partial d^{i}}{\partial x^{i}} \\
+& = - \frac{1}{n\_major} \sum_{i=1}^{n\_major} (y^{i} - d^{i}) d^{i} (1 - d^{i})
+\end{split}
 \end{equation}
 
 \begin{equation} \label{eq:fne_derivative}
-\frac{dMSE_{minor}}{dx} = - \frac{1}{n\_minor} \sum_{i=1}^{n\_minor} (y^{i} - d^{i}) d^{i} (1 - d^{i})
+\begin{split}
+\frac{\partial MSE_{minor}}{\partial x^{i}} & = \frac{\partial MSE_{minor}}{\partial d^{i}} * \frac{\partial d^{i}}{\partial x^{i}} \\
+& = - \frac{1}{n\_minor} \sum_{i=1}^{n\_minor} (y^{i} - d^{i}) d^{i} (1 - d^{i})
+\end{split}
 \end{equation}
 
 เราจะใช้อนุพันธ์ที่ต่างกันสำหรับตัวอย่างของแต่ละกลุ่มข้อมูล กล่าวคือ ถ้าเป็นตัวอย่างของกลุ่มข้อมูลส่วนมาก สมการที่~\ref{eq:fpe_derivative} จะถูกใช้ และสมการที่~\ref{eq:fne_derivative} จะถูกใช้เมื่อตัวย่างเป็นของกลุ่มข้อมูลส่วนน้อย
@@ -163,17 +175,23 @@ MSE_{minor} = \frac{1}{n\_minor}\sum_{i=1}^{n\_minor}\frac{1}{2}(y^{i} - d^{i})^
 เมื่อหาอนุพันธ์ของ $l_{Hybrid}$ เทียบกับ x จะได้
 
 \begin{equation}
-\frac{dl_{Hybrid}}{dx} = \frac{dFL_{major}}{dx} + \frac{dFL_{minor}}{dx}
+\frac{\partial l_{Hybrid}}{\partial x^{i}} = \frac{\partial FL_{major}}{\partial x^{i}} + \frac{\partial FL_{minor}}{\partial x^{i}}
 \end{equation}
 
 โดยที่
 
 \begin{equation} \label{fl_major_derivative}
-\frac{dFL_{major}}{dx} = \frac{1}{n\_major} \sum_{i = 1}^{n\_major} y^{i} (1 - p_{t}^{i})^{\gamma} (\gamma p_{t}^{i} \log (p_{t}^{i}) + p_{t}^{i} - 1)
+\begin{split}
+\frac{\partial FL_{major}}{\partial x^{i}} & = \frac{\partial FL_{major}}{\partial p_{t}^{i}} * \frac{\partial p_{t}^{i}}{\partial x^{i}} \\
+& = \frac{1}{n\_major} \sum_{i = 1}^{n\_major} y^{i} (1 - p_{t}^{i})^{\gamma} (\gamma p_{t}^{i} \log (p_{t}^{i}) + p_{t}^{i} - 1)
+\end{split}
 \end{equation}
 
 \begin{equation} \label{fl_minor_derivative}
-\frac{dFL_{minor}}{dx} = \frac{1}{n\_minor} \sum_{i = 1}^{n\_minor} y^{i} (1 - p_{t}^{i})^{\gamma} (\gamma p_{t}^{i} \log (p_{t}^{i}) + p_{t}^{i} - 1)
+\begin{split}
+\frac{\partial FL_{minor}}{\partial x^{i}} & = \frac{\partial FL_{minor}}{\partial p_{t}^{i}} * \frac{\partial p_{t}^{i}}{\partial x^{i}} \\
+& = \frac{1}{n\_minor} \sum_{i = 1}^{n\_minor} y^{i} (1 - p_{t}^{i})^{\gamma} (\gamma p_{t}^{i} \log (p_{t}^{i}) + p_{t}^{i} - 1)
+\end{split}
 \end{equation}
 
 เช่นเดียวกับการใช้อนุพันธ์ของ MFE ก็คือ เราจะใช้สมการที่~\ref{fl_major_derivative} ถ้าตัวอย่างเป็นของกลุ่มข้อมูลส่วนมาก และจะใช้สมการที่~\ref{fl_minor_derivative} ถ้าตัวอย่างเป็นของกลุ่มข้อมูลส่วนน้อย

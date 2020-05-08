@@ -8,17 +8,37 @@
 \section{Binary Classification}
 \subsubsection{ผลการทดลองกับชุดข้อมูลแบบมีโครงสร้าง}
 \subsubsection{ผลการทดลองกับชุดข้อมูล CIFAR-100}
-การทดลองใน~\cite{Wang:2016} ได้ทำการดัดแปลง CIFAR-100 โดยการแบ่งชุดข้อมูลออกเป็น 3 ชุดข้อมูลย่อย คือ Tree 1, Tree 2 และ Household และเลือกข้อมูลมา 2 กลุ่มที่แตกต่างกันสำหรับแต่ละชุดข้อมูลย่อย ที่ซึ่งข้อมูลในแต่ละชุดข้อมูลย่อยจะถูกทำให้ไม่สมดุลกัน สำหรับรายละเอียดของกลุ่มข้อมูลในแต่ละชุดข้อมูลย่อยดังนี้
+การทดลองใน~\cite{Wang:2016} ได้ทำการดัดแปลง CIFAR-100 โดยการแบ่งชุดข้อมูลออกเป็น 3 ชุดข้อมูลย่อย คือ Tree1, Tree2 และ Household และเลือกข้อมูลมา 2 กลุ่มที่แตกต่างกันสำหรับแต่ละชุดข้อมูลย่อย ที่ซึ่งข้อมูลในแต่ละชุดข้อมูลย่อยจะถูกทำให้ไม่สมดุลกัน สำหรับรายละเอียดของกลุ่มข้อมูลในแต่ละชุดข้อมูลย่อยดังนี้
 
-\paragraph{Tree 1}
+\paragraph{Tree1}
 เป็นชุดข้อมูลที่ประกอบด้วยข้อมูลของกลุ่ม \emph{maple tree} และ \emph{oak tree} โดยจะให้กลุ่ม \emph{maple tree} เป็นกลุ่มข้อมูลส่วนมาก และ \emph{oak tree} เป็นกลุ่มข้อมูลส่วนน้อย
 
-\paragraph{Tree 2}
+\paragraph{Tree2}
 เป็นชุดข้อมูลที่ประกอบด้วยข้อมูลของกลุ่ม \emph{maple tree} และ \emph{palm tree} โดยจะให้กลุ่ม \emph{maple tree} เป็นกลุ่มข้อมูลส่วนมาก และ \emph{palm tree} เป็นกลุ่มข้อมูลส่วนน้อย
 
-\paragraph{Tree Household}
+\paragraph{Household}
 เป็นชุดข้อมูลที่ประกอบด้วยข้อมูลของกลุ่ม \emph{household furniture} และ \emph{household electrical devices} โดยจะให้กลุ่ม \emph{household furniture} เป็นกลุ่มข้อมูลส่วนมาก และ \emph{household electrical devices} เป็นกลุ่มข้อมูลส่วนน้อย
 
+รูปที่~\ref{fig:result-cifar100} แสดงผลการทดลองของแต่ละชุดข้อมูล โดยจากผลการทดลองสามารถสรุปได้ว่าฟังก์ชันสูญเสียแบบ Hybrid มีประสิทธิภาพเหนือกว่าฟังก์ชันสูญเสียอื่น ๆ อย่างสิ้นเชิง
+
+\begin{figure}[h]
+  \centering
+  \subfigure[]{
+      \includegraphics[width=0.45\columnwidth]{results/Household_cifar100.png}
+      \label{fig:result-cifar100-household}
+  }
+  \subfigure[]{
+      \includegraphics[width=0.45\columnwidth]{results/Tree1_cifar100.png}
+      \label{fig:result-cifar100-tree1}
+  }
+  \subfigure[]{
+    \includegraphics[width=0.45\columnwidth]{results/Tree2_cifar100.png}
+    \label{fig:result-cifar100-tree2}
+  }
+  \caption{ประสิทธิภาพของแต่ละฟังก์ชันสูญเสีย เมื่อทดสอบกับชุดข้อมูลที่มีอัตราจำนวนตัวอย่างของกลุ่มข้อมูลส่วนน้อยที่แตกต่างกัน}
+  \label{fig:result-cifar100}
+\end{figure}
+\FloatBarrier
 
 \label{ex:cifar-100}
 \section{Multi-Class Classification}
