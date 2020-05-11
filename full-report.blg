@@ -21,45 +21,45 @@ Warning--empty journal in Ding:2011
 Warning--empty institution in Krizhevsky:2009
 
 Done.
-You've used 12 entries,
+You've used 11 entries,
             4087 wiz_defined-function locations,
-            911 strings with 9727 characters,
-and the built_in function-call counts, 9665 in all, are:
-= -- 730
-> -- 259
-< -- 81
-+ -- 144
-- -- 45
-* -- 465
-:= -- 1369
-add.period$ -- 25
-call.type$ -- 12
+            900 strings with 9766 characters,
+and the built_in function-call counts, 9437 in all, are:
+= -- 709
+> -- 274
+< -- 82
++ -- 152
+- -- 49
+* -- 456
+:= -- 1319
+add.period$ -- 23
+call.type$ -- 11
 change.case$ -- 11
-chr.to.int$ -- 207
-cite$ -- 14
-duplicate$ -- 668
-empty$ -- 803
-format.name$ -- 55
-if$ -- 2265
+chr.to.int$ -- 210
+cite$ -- 13
+duplicate$ -- 652
+empty$ -- 754
+format.name$ -- 58
+if$ -- 2205
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 121
-newline$ -- 61
-num.names$ -- 12
-pop$ -- 308
+int.to.str$ -- 11
+missing$ -- 119
+newline$ -- 56
+num.names$ -- 11
+pop$ -- 299
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 735
+skip$ -- 712
 stack$ -- 0
-substring$ -- 495
-swap$ -- 546
+substring$ -- 501
+swap$ -- 540
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
+type$ -- 11
 warning$ -- 2
 while$ -- 43
-width$ -- 14
-write$ -- 131
+width$ -- 13
+write$ -- 121
 (There were 2 warnings)

@@ -22,12 +22,14 @@
 \BIBdecl
 
 \bibitem{Buda:2017}
-\BIBentryALTinterwordspacing
 M.~Buda, A.~Maki, and M.~A. Mazurowski, ``A systematic study of the class
-  imbalance problem in convolutional neural networks,'' \emph{CoRR}, vol.
-  abs/1710.05381, 2017. [Online]. Available:
-  \url{http://arxiv.org/abs/1710.05381}
-\BIBentrySTDinterwordspacing
+  imbalance problem in convolutional neural networks,'' \emph{Neural Networks},
+  vol. 106, pp. 249--259, 2018.
+
+\bibitem{Hensman:2015}
+P.~Hensman and D.~Masko, ``The impact of imbalanced training data for
+  convolutional neural networks,'' \emph{Degree Project in Computer Science,
+  KTH Royal Institute of Technology}, 2015.
 
 \bibitem{Anand:1993}
 R.~Anand, K.~G. Mehrotra, C.~K. Mohan, and S.~Ranka, ``An improved algorithm
@@ -39,19 +41,11 @@ Z.~Liu, Z.~Miao, X.~Zhan, J.~Wang, B.~Gong, and S.~X. Yu, ``Large-scale
   long-tailed recognition in an open world,'' in \emph{Proceedings of the IEEE
   Conference on Computer Vision and Pattern Recognition}, 2019, pp. 2537--2546.
 
-\bibitem{Ling-CS:2010}
-C.~X. Ling and V.~S. Sheng, \emph{Cost-Sensitive Learning}.\hskip 1em plus
-  0.5em minus 0.4em\relax Boston, MA: Springer US, 2010, pp. 231--235.
-
-\bibitem{Goodfellow:2016}
-I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em
-  plus 0.5em minus 0.4em\relax MIT Press, 2016,
-  \url{http://www.deeplearningbook.org}.
-
-\bibitem{Yan:2015}
-Y.~{Yan}, M.~{Chen}, M.~{Shyu}, and S.~{Chen}, ``Deep learning for imbalanced
-  multimedia data classification,'' in \emph{2015 IEEE International Symposium
-  on Multimedia (ISM)}, Dec 2015, pp. 483--488.
+\bibitem{Wang:2016}
+S.~Wang, W.~Liu, J.~Wu, L.~Cao, Q.~Meng, and P.~J. Kennedy, ``Training deep
+  neural networks on imbalanced data sets,'' in \emph{2016 international joint
+  conference on neural networks (IJCNN)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2016, pp. 4368--4374.
 
 \bibitem{Lin:2017}
 T.-Y. Lin, P.~Goyal, R.~Girshick, K.~He, and P.~Doll{\'a}r, ``Focal loss for
@@ -62,12 +56,6 @@ T.-Y. Lin, P.~Goyal, R.~Girshick, K.~He, and P.~Doll{\'a}r, ``Focal loss for
 X.~Zhu, X.-Y. Jing, F.~Zhang, X.~Zhang, X.~You, and X.~Cui, ``Distance learning
   by mining hard and easy negative samples for person re-identification,''
   \emph{Pattern Recognition}, vol.~95, pp. 211--222, 2019.
-
-\bibitem{Wang:2016}
-S.~Wang, W.~Liu, J.~Wu, L.~Cao, Q.~Meng, and P.~J. Kennedy, ``Training deep
-  neural networks on imbalanced data sets,'' in \emph{2016 international joint
-  conference on neural networks (IJCNN)}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2016, pp. 4368--4374.
 
 \bibitem{Ding:2011}
 Z.~Ding, ``Diversified ensemble classifiers for highly imbalanced data learning
@@ -81,5 +69,12 @@ A.~Krizhevsky, ``Learning multiple layers of features from tiny images,'' Tech.
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in \emph{Proceedings of the IEEE conference on computer vision
   and pattern recognition}, 2016, pp. 770--778.
+
+\bibitem{Abadi:2016}
+M.~Abadi, P.~Barham, J.~Chen, Z.~Chen, A.~Davis, J.~Dean, M.~Devin,
+  S.~Ghemawat, G.~Irving, M.~Isard \emph{et~al.}, ``Tensorflow: A system for
+  large-scale machine learning,'' in \emph{12th $\{$USENIX$\}$ Symposium on
+  Operating Systems Design and Implementation ($\{$OSDI$\}$ 16)}, 2016, pp.
+  265--283.
 
 \end{thebibliography}

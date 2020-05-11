@@ -20,6 +20,7 @@
 \RequirePackage{subfigure}
 \RequirePackage{etoolbox}
 \RequirePackage{array}
+\RequirePackage{hyperref}
 
 % ##### Set caption label to be left-aligned
 \captionsetup[table]{justification=raggedright, singlelinecheck=off}

@@ -8,6 +8,7 @@
 \usepackage[super,square]{natbib}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{hyphenat}
 
 \setmainfont{Angsana}[
  Path = fonts/,
@@ -34,7 +35,7 @@
 \makeatother
 
 %1. Your thesis title (THAI)
-\newcommand{\ThesisTitle}{ฟังก์ชันสูญเสียสำหรับการเรียนรู้ข้อมูลที่ไม่สมดุล}
+\newcommand{\ThesisTitle}{ฟังก์ชันสูญเสียสำหรับการเรียนรู้ข้อมูลที่ไม่สมดุลของแบบจำลองโครงข่ายประสาทเทียมเชิงลึก}
 %2. Your thesis title (ENG)
 \newcommand{\ThesisTitleENG}{Hybrid Loss for Learning Imbalanced Data}
 %3. Author name
@@ -70,19 +71,14 @@
     \newgeometry{top=1in, bottom=1in, left=1.5in, right=1in, includefoot}
     
     \makeabstract{
-        ปัญหาความไม่สมดุลของข้อมูล (Class Imbalance Problem) เป็นเรื่องที่ถูกหยิบขึ้นมาวิจัยอย่างแพร่หลาย เนื่องข้อมูลส่วนใหญ่มีจำนวนตัวอย่างของแต่ละกลุ่มข้อมูลไม่เท่ากัน
-        ในงานวิจัยชิ้นนี้มุ่งเน้นไปที่การสร้างสรรค์แบบจำลองการเรียนรู้เชิงลึกแบบผสม (Hybrid Deep Learning) ซึ่งเป็นการผสมผสานกันระหว่างแบบจำลองการเรียนรู้เชิงลึก (Deep Learning) หลายตัว 
-        มาเพื่อแก้ปัญหาดังกล่าว เนื่องจากแบบจำลอง Hybrid Deep Learning สามารถเพิ่มประสิทธิภาพในการจัดกลุ่มข้อมูลที่มีความสมดุลกันได้ ในทางเดียวกันแบบจำลองดังกล่าวอาจจะสามารถจัดกลุ่มข้อมูลที่ไม่สมดุลกันได้อย่างมีประสิทธิภาพเช่นเดียวกัน 
-        ในเบื้องต้นเราได้สร้างแบบจำลอง Deep Learning แบบง่าย แล้วเพ่ิมความซับซ้อนของแบบจำลองขึ้นเรื่อย ๆ เพื่อที่จะได้แบบจำลองที่สมบูรณ์ที่สุด
+        ปัญหาความไม่สมดุลของข้อมูลเป็นเรื่องที่ถูกหยิบขึ้นมาศึกษาอย่างแพร่หลาย  แบบจำลองโครงข่ายประสาทเทียมเชิงลึกสามารถให้ผลการทำงานที่ย่ำแย่เมื่อมันเรียนรู้จากชุดข้อมูลที่ไม่สมดุลกัน งานวิจัยนี้ได้นำเสนอฟังก์ชันสูญเสียแบบผสมผสานที่จะช่วยให้แบบจำลองสามารถเรียนรู้ข้อมูลที่ไม่สมดุลอย่างมีประสิทธิภาพ
+        ฟังก์ชันสูญเสียนี้เป็นการผสมผสานกันระหว่างแนวคิดการคำนวณค่าสูญเสียของสองฟังก์ชันสูญเสีย ที่ซึ่งทั้งสองฟังก์ชันเป็นฟังก์ชันสูญเสียที่ถูกออกแบบมาเพื่อจัดการกับปัญหาความไม่สมดุลของข้อมูลอยู่แล้ว และมีแนวคิดการแก้ปัญหาที่ต่างกันและน่าสนใจ ผู้วิจัยจึงได้เสนอที่จะรวมแนวคิดของทั้งสองฟังก์ชันดังกล่าวเข้าด้วยกัน เพื่อที่จะทำให้ประสิทธิภาพของการเรียนรู้ของแบบจำลองนั้นดีขึ้น ฟังก์สูญเสียแบบผสมผสานที่นำเสนอถูกทดสอบกับชุดข้อมูลที่หลากหลาย และผลการทดลองแสดงให้เห็นว่าฟังก์ชันสูญเสียที่นำเสนอสามารถเพิ่มประสิทธิภาพของแบบจำลองได้เหนือกว่าฟังก์ชันสูญเสียอื่น ๆ 
     }
 
     \makeabstracteng{
         Classification of imbalanced data is extremely common in practice, and this problem has been widely studied in classical machine learning. 
-        A classifier produced from an imbalanced data set is likely to be biased towards the majority class and show inferior classification accuracy on the minority class. 
-        This work aims at inventing a hybrid deep learning model for classification on imbalanced data. Recently, many hybrid deep learning model 
-        can boost the accuracy on classificaiton of balanced data. In the same way, it may work on imbalanced data effectively. Initially, a simple deep learning model is built and tested. 
-        We will find out its disvantages or problems such as overfitting and then solve those by building more complex model. 
-        The process will be repeated until we get a perfect model with its satisfying results.
+        A deep neural network (DNN) model produced from an imbalanced data set is likely to be biased towards the majority class and show inferior classification accuracy on the minority class. 
+        This work aims at inventing a new loss for learning imbalanced data. This loss is hybridized by two well-performed loss functions, mean false error (MFE) and focal loss (FL). The two loss functions are designed to combat the imbalance problem, and each of them has its own advantage. Hence, we propose to hybridize the two losses and redefine as a hybrid loss that applies the calculation procedures of MFE’s total loss to the focal loss. The proposed loss function is tested with several imbalanced datasets, and our experimental results show that it can overcome the existing loss functions.
     }
 
     \makeack

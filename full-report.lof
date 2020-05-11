@@ -1,14 +1,30 @@
-\contentsline {figure}{\numberline {2.1}{\ignorespaces ตัวอย่างการกระจายของจำนวนตัวอย่างของกลุ่มข้อมูล (ก) $p = 10$, $\mu = 0.5$ (ข) $p = 2$, $\mu = 0.9$ (ค) $p = 10$\relax }}{4}
-\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{4}
-\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{4}
-\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{4}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces ตัวอย่างกราฟ ROC Curve แบบต่าง ๆ\relax }}{14}
-\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{14}
-\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{14}
-\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{14}
-\contentsline {subfigure}{\numberline {(ง)}{\ignorespaces {}}}{14}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces ประสิทธิภาพของแต่ละฟังก์ชันสูญเสีย เมื่อทดสอบกับชุดข้อมูลที่มีอัตราจำนวนตัวอย่างของกลุ่มข้อมูลส่วนน้อยที่แตกต่างกัน\relax }}{16}
-\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{16}
-\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{16}
-\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{16}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces ตัวอย่างการกระจายของจำนวนตัวอย่างของกลุ่มข้อมูล (ก) $p = 10$, $\mu = 0.5$ (ข) $p = 2$, $\mu = 0.9$ (ค) $p = 10$\relax }}{5}{figure.caption.3}
+\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{5}{figure.caption.3}
+\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{5}{figure.caption.3}
+\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{5}{figure.caption.3}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces แสดงจำนวนตัวอย่างของกลุ่มข้อมูลส่วนมากและส่วนน้อยใน Training Set ของชุดข้อมูล \emph {Tree1}, \emph {Tree2} และ \emph {Household} ที่ร้อยละการมีอยู่ของตัวอย่างของกลุ่มข้อมูลส่วนน้อยต่าง ๆ\relax }}{14}{figure.caption.10}
+\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{14}{figure.caption.10}
+\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{14}{figure.caption.10}
+\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces แสดงจำนวนตัวอย่างของกลุ่มข้อมูลส่วนมากและส่วนน้อยใน Training Set ของชุดข้อมูล \textit {optical\_digits} ($p = 9.14,\nobreakspace {}\mu = 0.09$), \emph {satimage} ($p = 9.27,\nobreakspace {}\mu = 0.09$), \textit {pen\_digits} ($p = 9.41,\nobreakspace {}\mu = 0.09$) และ \emph {scene} ($p = 12.55,\nobreakspace {}\mu = 0.07$)\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces ตัวอย่างกราฟ ROC Curve แบบต่าง ๆ\relax }}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(ง)}{\ignorespaces {}}}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces ประสิทธิภาพของแต่ละฟังก์ชันสูญเสีย เมื่อทดสอบกับชุดข้อมูลที่มีอัตราจำนวนตัวอย่างของกลุ่มข้อมูลส่วนน้อยที่แตกต่างกัน\relax }}{18}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{18}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{18}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces ค่าสูญเสียในแต่ละรอบของการเรียนรู้ของแบบจำลอง เมื่อเรียนรู้จากชุดข้อมูล Household ที่ร้อยละการมีอยู่ของตัวอย่างของกลุ่มข้อมูลส่วนน้อยต่าง ๆ\relax }}{19}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(ก)}{\ignorespaces {}}}{19}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(ข)}{\ignorespaces {}}}{19}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(ค)}{\ignorespaces {}}}{19}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(ง)}{\ignorespaces {}}}{19}{figure.caption.14}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \contentsfinish 

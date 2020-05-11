@@ -1,0 +1,26 @@
+\BOOKMARK [0][-]{Doc-Start}{บทคัดย่อ}{}% 1
+\BOOKMARK [0][-]{table.caption.1}{บทคัดย่อ ภาษาอังกฤษ}{}% 2
+\BOOKMARK [0][-]{table.caption.2}{กิตติกรรมประกาศ}{}% 3
+\BOOKMARK [0][-]{table.caption.2}{สารบัญ}{}% 4
+\BOOKMARK [0][-]{table.caption.2}{สารบัญตาราง}{}% 5
+\BOOKMARK [0][-]{table.caption.2}{สารบัญภาพ}{}% 6
+\BOOKMARK [0][-]{chapter.1}{บทนำ}{}% 7
+\BOOKMARK [1][-]{section.1.1}{ที่มาและความสำคัญ}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{ความมุ่งหมายและวัตถุประสงค์ของการศึกษา}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{ขอบเขตการพัฒนาโครงงาน}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.4}{ขั้นตอนการดำเนินงาน}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.5}{ประโยชน์ที่คาดว่าจะได้รับ}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{การทบทวนวรรณกรรมที่เกี่ยวข้อง}{}% 13
+\BOOKMARK [1][-]{section.2.1}{ปัญหาความไม่สมดุลกันของกลุ่มข้อมูล}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{ฟังก์ชันสูญเสีย \(Loss Function\)}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{วิธีการดำเนินการวิจัย}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Hybrid Loss: ฟังก์ชันสูญเสียที่นำเสนอ}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{การทดลอง}{}% 18
+\BOOKMARK [1][-]{section.4.1}{การแบ่งข้อมูล}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{ชุดข้อมูล}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{การตั้งค่าเชิงเทคนิคของการทดลอง}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Metrics สำหรับการประเมินประสิทธิภาพของแบบจำลอง}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{ผลการทดลอง}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{บทสรุป}{}% 24
+\BOOKMARK [0][-]{chapter.5}{บรรณานุกรม}{}% 25
+\BOOKMARK [0][-]{appendix.A}{เรื่องที่หนึ่ง}{}% 26
